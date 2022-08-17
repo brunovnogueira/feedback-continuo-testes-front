@@ -39,8 +39,4 @@ public class BaseTest extends Elements{
         Actions builder = new Actions(driver);
         builder.moveToElement(driver.findElement(by)).perform();
     }
-
-    public static void esperar(By by){
-        waitElementVisibility(by);
-    }
 }
