@@ -1,6 +1,7 @@
 package steps;
 
 import com.github.javafaker.Faker;
+import org.junit.Assert;
 import org.junit.Test;
 import pages.PaginaCriarConta;
 import pages.PaginaInicial;
@@ -15,13 +16,13 @@ public class LoginSteps extends Browser {
     Faker faker = new Faker();
 
     String nome = faker.name().fullName();
-    String email = faker.name().firstName();
+    String email = faker.name().firstName()+"@dbccompany.com.br";
 
     @Test
     public void loginComSucesso(){
         paginaInicial.clicarBtnCriar();
         paginaCriarConta.preencherNome(nome);
-        paginaCriarConta.preencherEmail(email+"@dbccompany.com.br");
+        paginaCriarConta.preencherEmail(email);
         paginaCriarConta.preencherSenha("1234@aA");
         paginaCriarConta.preencherConfirmarSenha("1234@aA");
         paginaCriarConta.selecionarCargo("ANALISTA_DE_DADOS");
@@ -32,5 +33,8 @@ public class LoginSteps extends Browser {
         paginaInicial.preencherEmail(email);
         paginaInicial.preencherSenha("1234@aA");
         paginaInicial.clicarBtnEntrar();
+
+        Assert.assertEquals(paginaPrincipalLogado.validarNome(),nome);
+        Assert.assertEquals(paginaPrincipalLogado.validarEmail(),email);
     }
 }
