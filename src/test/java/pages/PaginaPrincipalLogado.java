@@ -5,10 +5,10 @@ import util.BaseTest;
 
 
 public class PaginaPrincipalLogado {
-    private static final By nome = By.cssSelector("#root > main > div > section > div.sc-hHLeRK.bdKHOe > h2");
-    private static final By email = By.cssSelector("#root > main > div > section > div.sc-hHLeRK.bdKHOe > small");
-    private static final By btnUserIcon = By.cssSelector("#root > header > div > div > button > img");
-    private static final By btnSair = By.cssSelector("#root > header > div > div > button.sc-eCYdqJ.iecHYK");
+    private static final By nome = By.xpath("/html/body/div/main/div/section/div[1]/h2");
+    private static final By email = By.xpath("/html/body/div/main/div/section/div[1]/small");
+    private static final By btnUserIcon = By.xpath("/html/body/div/header/div/div/button");
+    private static final By btnSair = By.xpath("/html/body/div/header/div/div/button[1]");
     public String validarNome(){
         return BaseTest.getText(nome);
     }

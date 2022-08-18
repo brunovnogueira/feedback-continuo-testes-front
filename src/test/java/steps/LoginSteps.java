@@ -25,7 +25,6 @@ public class LoginSteps extends Browser {
         paginaCriarConta.preencherSenha("1234@aA");
         paginaCriarConta.preencherConfirmarSenha("1234@aA");
         paginaCriarConta.selecionarCargo("ANALISTA_DE_DADOS");
-        paginaCriarConta.adicionarImagem();
         paginaCriarConta.clicarBtnCriarConta();
         paginaPrincipalLogado.clicarUserIcon();
         paginaPrincipalLogado.clicarSair();
