@@ -10,7 +10,7 @@ public class PaginaCriarConta {
     private static final By campoConfirmarSenha = By.cssSelector("#confirmPassword");
     private static final By listaCargo = By.cssSelector("#role");
     private static final By btnAdicionarImagem = By.cssSelector("#avatar");
-    private static final By btnCriarConta = By.cssSelector("#root > div.sc-gsnTZi.jVyDQX > section.sc-hKMtZM.fDWqpn > div > form > button");
+    private static final By btnCriarConta = By.xpath("//*[@id=\"root\"]/div[2]/section[2]/div/form/button");
     private static final By msgNomeAtencao = By.cssSelector("#root > div.sc-gsnTZi.jVyDQX > section.sc-hKMtZM.fDWqpn > div > form > div:nth-child(1) > div > span");
     private static final By msgEmailAtencao = By.cssSelector("#root > div.sc-gsnTZi.jVyDQX > section.sc-hKMtZM.fDWqpn > div > form > div:nth-child(2) > div > span");
     private static final By msgSenhaAtencao = By.cssSelector("#root > div.sc-gsnTZi.jVyDQX > section.sc-hKMtZM.fDWqpn > div > form > div:nth-child(3) > div > span");

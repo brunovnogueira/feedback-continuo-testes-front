@@ -1,8 +1,11 @@
 package util;
 
+import jdk.jfr.Timespan;
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
@@ -38,5 +41,11 @@ public class BaseTest extends Elements{
         waitElement(by);
         Actions builder = new Actions(driver);
         builder.moveToElement(driver.findElement(by)).perform();
+    }
+
+    public static void esperar(By by, String text){
+        waitElement(by);
+        WebDriverWait wait = new WebDriverWait(driver,30);
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(by,text));
     }
 }
