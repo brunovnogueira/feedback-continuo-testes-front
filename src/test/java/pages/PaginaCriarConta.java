@@ -10,12 +10,12 @@ public class PaginaCriarConta {
     private static final By campoConfirmarSenha = By.cssSelector("#confirmPassword");
     private static final By listaCargo = By.cssSelector("#role");
     private static final By btnAdicionarImagem = By.cssSelector("#avatar");
-    private static final By btnCriarConta = By.xpath("/html/body/div/div[2]/section[2]/div/form/button");
-    private static final By msgNomeAtencao = By.xpath("/html/body/div/div[2]/section[2]/div/form/div[1]/div/span");
-    private static final By msgEmailAtencao = By.xpath("/html/body/div/div[2]/section[2]/div/form/div[2]/div/span");
-    private static final By msgSenhaAtencao = By.xpath("/html/body/div/div[2]/section[2]/div/form/div[3]/div[1]/span");
-    private static final By msgConfirmacaoSenhaAtencao = By.xpath("/html/body/div/div[2]/section[2]/div/form/div[4]/div/span");
-    private static final By msgSenhasIguais = By.xpath("/html/body/div/div[2]/section[2]/div/form/div[4]/div/span");
+    private static final By btnCriarConta = By.cssSelector("#id-button-create-user");
+    private static final By msgNomeAtencao = By.cssSelector("#id-message-name");
+    private static final By msgEmailAtencao = By.cssSelector("#id-message-email");
+    private static final By msgSenhaAtencao = By.cssSelector("#id-message-password");
+    private static final By msgConfirmacaoSenhaAtencao = By.cssSelector("#id-message-confirm-password");
+    private static final By msgSenhasIguais = By.cssSelector("#id-message-confirm-password");
     public void preencherNome(String nome){
         BaseTest.sendKeys(campoNome,nome);
     }

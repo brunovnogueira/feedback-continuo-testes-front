@@ -7,11 +7,11 @@ public class PaginaInicial {
 
     private static final By campoEmail = By.cssSelector("#login");
     private static final By campoSenha = By.cssSelector("#senha");
-    private static final By btnEntrar = By.xpath("/html/body/div/div[2]/section[2]/div/form/button");
-    private static final By btnCriar = By.xpath("/html/body/div[1]/div[2]/section[2]/div/a[2]/span");
-    private static final By msgEmailAtencao = By.xpath("//*[@id=\"root\"]/div[2]/section[2]/div/form/div[1]/div/span");
-    private static final By msgSenhaAtencao = By.xpath("//*[@id=\"root\"]/div[2]/section[2]/div/form/div[2]/div/span");
-    private static final By toastErroLogin = By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[2]");
+    private static final By btnEntrar = By.cssSelector("#id-button-login");
+    private static final By btnCriar = By.cssSelector("#id-navigate-for-create > span");
+    private static final By msgEmailAtencao = By.xpath("/html/body/div[1]/div[2]/section[2]/div/form/div[1]/div/span");
+    private static final By msgSenhaAtencao = By.xpath("/html/body/div[1]/div[2]/section[2]/div/form/div[2]/div/span");
+    private static final By toastErroLogin = By.xpath("/html/body/div[1]/div[1]/div/div/div[2]");
 
     public void preencherEmail(String email){
         BaseTest.sendKeys(campoEmail,email);

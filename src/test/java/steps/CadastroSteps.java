@@ -16,13 +16,17 @@ public class CadastroSteps extends Browser {
 
     String nome = faker.name().fullName();
     String email = faker.name().firstName();
-    String msgAtencaoCampos = "Necessário preencher";
+    String msgAtencaoCampos = "Obrigatório preencher.";
 
     /*CADASTRO----------------------------------------------------------------------------------------*/
     @Test
     public void cadastrarComSucesso(){
         paginaInicial.clicarBtnCriar();
-        paginaCriarConta.preencherNome(nome);
+        if (nome.length()>20){
+            paginaCriarConta.preencherNome("Bruno Nogueira");
+        }else {
+            paginaCriarConta.preencherNome(nome);
+        }
         paginaCriarConta.preencherEmail(email+"@dbccompany.com.br");
         paginaCriarConta.preencherSenha("1234@aA");
         paginaCriarConta.preencherConfirmarSenha("1234@aA");
@@ -37,7 +41,11 @@ public class CadastroSteps extends Browser {
     @Test
     public void cadastrarSemImagemComSucesso(){
         paginaInicial.clicarBtnCriar();
-        paginaCriarConta.preencherNome(nome);
+        if (nome.length()>20){
+            paginaCriarConta.preencherNome("Bruno Nogueira");
+        }else {
+            paginaCriarConta.preencherNome(nome);
+        }
         paginaCriarConta.preencherEmail(email+"@dbccompany.com.br");
         paginaCriarConta.preencherSenha("1234@aA");
         paginaCriarConta.preencherConfirmarSenha("1234@aA");
@@ -63,7 +71,11 @@ public class CadastroSteps extends Browser {
     @Test
     public void cadastrarSemEmail(){
         paginaInicial.clicarBtnCriar();
-        paginaCriarConta.preencherNome(nome);
+        if (nome.length()>20){
+            paginaCriarConta.preencherNome("Bruno Nogueira");
+        }else {
+            paginaCriarConta.preencherNome(nome);
+        }
         paginaCriarConta.preencherSenha("1234@aA");
         paginaCriarConta.preencherConfirmarSenha("1234@aA");
         paginaCriarConta.selecionarCargo("ANALISTA_DE_DADOS");
@@ -75,7 +87,11 @@ public class CadastroSteps extends Browser {
     @Test
     public void cadastrarSemSenha(){
         paginaInicial.clicarBtnCriar();
-        paginaCriarConta.preencherNome(nome);
+        if (nome.length()>20){
+            paginaCriarConta.preencherNome("Bruno Nogueira");
+        }else {
+            paginaCriarConta.preencherNome(nome);
+        }
         paginaCriarConta.preencherEmail(email+"@dbccompany.com.br");
         paginaCriarConta.preencherConfirmarSenha("1234@aA");
         paginaCriarConta.selecionarCargo("ANALISTA_DE_DADOS");
@@ -87,7 +103,11 @@ public class CadastroSteps extends Browser {
     @Test
     public void cadastrarSemConfirmacaoSenha(){
         paginaInicial.clicarBtnCriar();
-        paginaCriarConta.preencherNome(nome);
+        if (nome.length()>20){
+            paginaCriarConta.preencherNome("Bruno Nogueira");
+        }else {
+            paginaCriarConta.preencherNome(nome);
+        }
         paginaCriarConta.preencherEmail(email+"@dbccompany.com.br");
         paginaCriarConta.preencherSenha("1234@aA");
         paginaCriarConta.selecionarCargo("ANALISTA_DE_DADOS");
@@ -99,7 +119,11 @@ public class CadastroSteps extends Browser {
     @Test
     public void cadastrarSenhasDiferentes(){
         paginaInicial.clicarBtnCriar();
-        paginaCriarConta.preencherNome(nome);
+        if (nome.length()>20){
+            paginaCriarConta.preencherNome("Bruno Nogueira");
+        }else {
+            paginaCriarConta.preencherNome(nome);
+        }
         paginaCriarConta.preencherEmail(email+"@dbccompany.com.br");
         paginaCriarConta.preencherSenha("1234@aA");
         paginaCriarConta.preencherConfirmarSenha("1234@a");

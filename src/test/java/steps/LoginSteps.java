@@ -16,11 +16,17 @@ public class LoginSteps extends Browser {
 
     String nome = faker.name().fullName();
     String email = faker.name().firstName()+"@dbccompany.com.br";
+    String msgAtencao = "Obrigatório preencher.";
+    String toastErroLogin = "Erro de login. Email ou senha invalido.";
 
     @Test
     public void loginComSucesso(){
         paginaInicial.clicarBtnCriar();
-        paginaCriarConta.preencherNome(nome);
+        if (nome.length()>20){
+            paginaCriarConta.preencherNome("Bruno Nogueira");
+        }else {
+            paginaCriarConta.preencherNome(nome);
+        }
         paginaCriarConta.preencherEmail(email);
         paginaCriarConta.preencherSenha("1234@aA");
         paginaCriarConta.preencherConfirmarSenha("1234@aA");
@@ -38,7 +44,11 @@ public class LoginSteps extends Browser {
     @Test
     public void loginSemEmail(){
         paginaInicial.clicarBtnCriar();
-        paginaCriarConta.preencherNome(nome);
+        if (nome.length()>20){
+            paginaCriarConta.preencherNome("Bruno Nogueira");
+        }else {
+            paginaCriarConta.preencherNome(nome);
+        }
         paginaCriarConta.preencherEmail(email);
         paginaCriarConta.preencherSenha("1234@aA");
         paginaCriarConta.preencherConfirmarSenha("1234@aA");
@@ -49,12 +59,16 @@ public class LoginSteps extends Browser {
         paginaPrincipalLogado.clicarSair();
         paginaInicial.preencherSenha("1234@aA");
 
-        Assert.assertEquals(paginaInicial.validarMsgEmail(),"Obrigatório preencher!");
+        Assert.assertEquals(paginaInicial.validarMsgEmail(),msgAtencao);
     }
     @Test
     public void loginSemSenha(){
         paginaInicial.clicarBtnCriar();
-        paginaCriarConta.preencherNome(nome);
+        if (nome.length()>20){
+            paginaCriarConta.preencherNome("Bruno Nogueira");
+        }else {
+            paginaCriarConta.preencherNome(nome);
+        }
         paginaCriarConta.preencherEmail(email);
         paginaCriarConta.preencherSenha("1234@aA");
         paginaCriarConta.preencherConfirmarSenha("1234@aA");
@@ -65,13 +79,17 @@ public class LoginSteps extends Browser {
         paginaPrincipalLogado.clicarSair();
         paginaInicial.preencherEmail(email);
 
-        Assert.assertEquals(paginaInicial.validarMsgSenha(),"obrigatorio preencher");
+        Assert.assertEquals(paginaInicial.validarMsgSenha(),msgAtencao);
     }
 
     @Test
     public void loginSenhaErrada(){
         paginaInicial.clicarBtnCriar();
-        paginaCriarConta.preencherNome(nome);
+        if (nome.length()>20){
+            paginaCriarConta.preencherNome("Bruno Nogueira");
+        }else {
+            paginaCriarConta.preencherNome(nome);
+        }
         paginaCriarConta.preencherEmail(email);
         paginaCriarConta.preencherSenha("1234@aA");
         paginaCriarConta.preencherConfirmarSenha("1234@aA");
@@ -84,13 +102,17 @@ public class LoginSteps extends Browser {
         paginaInicial.preencherSenha("1234@a");
         paginaInicial.clicarBtnEntrar();
 
-        Assert.assertEquals(paginaInicial.validarToastErroLogin(),"Erro de login. Email ou senha invalido.");
+        Assert.assertEquals(paginaInicial.validarToastErroLogin(),toastErroLogin);
     }
 
     @Test
     public void loginComEmailErrado(){
         paginaInicial.clicarBtnCriar();
-        paginaCriarConta.preencherNome(nome);
+        if (nome.length()>20){
+            paginaCriarConta.preencherNome("Bruno Nogueira");
+        }else {
+            paginaCriarConta.preencherNome(nome);
+        }
         paginaCriarConta.preencherEmail(email);
         paginaCriarConta.preencherSenha("1234@aA");
         paginaCriarConta.preencherConfirmarSenha("1234@aA");
@@ -103,6 +125,6 @@ public class LoginSteps extends Browser {
         paginaInicial.preencherSenha("1234@aA");
         paginaInicial.clicarBtnEntrar();
 
-        Assert.assertEquals(paginaInicial.validarToastErroLogin(),"Erro de login. Email ou senha invalido.");
+        Assert.assertEquals(paginaInicial.validarToastErroLogin(),toastErroLogin);
     }
 }
