@@ -64,4 +64,16 @@ public class PaginaCriarConta {
     public String validarMsgSenhasIguais(){
         return BaseTest.getText(msgSenhasIguais);
     }
+
+    public String nomeCriado(){
+        return BaseTest.getText(campoNome);
+    }
+
+    public String emailCriado(){
+        return BaseTest.getText(campoEmail);
+    }
+
+    public String senhaCriado(){
+        return BaseTest.getText(campoSenha);
+    }
 }
