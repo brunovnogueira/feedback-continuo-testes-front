@@ -23,7 +23,7 @@ public class CadastroSteps extends Browser {
     public void cadastrarComSucesso(){
         paginaInicial.clicarBtnCriar();
         if (nome.length()>20){
-            paginaCriarConta.preencherNome("Bruno Nogueira");
+            paginaCriarConta.preencherNome(faker.name().firstName()+" Nogueira");
         }else {
             paginaCriarConta.preencherNome(nome);
         }
@@ -42,7 +42,7 @@ public class CadastroSteps extends Browser {
     public void cadastrarSemImagemComSucesso(){
         paginaInicial.clicarBtnCriar();
         if (nome.length()>20){
-            paginaCriarConta.preencherNome("Bruno Nogueira");
+            paginaCriarConta.preencherNome(faker.name().firstName()+" Nogueira");
         }else {
             paginaCriarConta.preencherNome(nome);
         }
@@ -72,7 +72,7 @@ public class CadastroSteps extends Browser {
     public void cadastrarSemEmail(){
         paginaInicial.clicarBtnCriar();
         if (nome.length()>20){
-            paginaCriarConta.preencherNome("Bruno Nogueira");
+            paginaCriarConta.preencherNome(faker.name().firstName()+" Nogueira");
         }else {
             paginaCriarConta.preencherNome(nome);
         }
@@ -88,7 +88,7 @@ public class CadastroSteps extends Browser {
     public void cadastrarSemSenha(){
         paginaInicial.clicarBtnCriar();
         if (nome.length()>20){
-            paginaCriarConta.preencherNome("Bruno Nogueira");
+            paginaCriarConta.preencherNome(faker.name().firstName()+" Nogueira");
         }else {
             paginaCriarConta.preencherNome(nome);
         }
@@ -104,7 +104,7 @@ public class CadastroSteps extends Browser {
     public void cadastrarSemConfirmacaoSenha(){
         paginaInicial.clicarBtnCriar();
         if (nome.length()>20){
-            paginaCriarConta.preencherNome("Bruno Nogueira");
+            paginaCriarConta.preencherNome(faker.name().firstName()+" Nogueira");
         }else {
             paginaCriarConta.preencherNome(nome);
         }
@@ -120,7 +120,7 @@ public class CadastroSteps extends Browser {
     public void cadastrarSenhasDiferentes(){
         paginaInicial.clicarBtnCriar();
         if (nome.length()>20){
-            paginaCriarConta.preencherNome("Bruno Nogueira");
+            paginaCriarConta.preencherNome(faker.name().firstName()+" Nogueira");
         }else {
             paginaCriarConta.preencherNome(nome);
         }

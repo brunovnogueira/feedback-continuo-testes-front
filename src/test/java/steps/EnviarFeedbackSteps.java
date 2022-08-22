@@ -11,8 +11,6 @@ public class EnviarFeedbackSteps extends Browser {
     PaginaCriarConta paginaCriarConta = new PaginaCriarConta();
     PaginaPrincipalLogado paginaPrincipalLogado = new PaginaPrincipalLogado();
     PaginaFeedback paginaFeedback = new PaginaFeedback();
-    PaginaColaboradores paginaColaboradores = new PaginaColaboradores();
-    PaginaPerfil paginaPerfil = new PaginaPerfil();
 
     Faker faker = new Faker();
 
@@ -28,7 +26,7 @@ public class EnviarFeedbackSteps extends Browser {
         String nomeReceberVar = "";
         String emailReceberVar = emailReceber;
         if (nomeReceber.length() >= 20){
-            nomeReceberVar = "Bruno Nogueira";
+            nomeReceberVar = faker.name().firstName();
         }else {
             nomeReceberVar = nomeReceber;
         }
@@ -43,7 +41,12 @@ public class EnviarFeedbackSteps extends Browser {
 
         //Criar usuário que vai enviar feedback
         paginaInicial.clicarBtnCriar();
-        String nomeEnviarVar = nomeEnviar;
+        String nomeEnviarVar = "";
+        if (nomeEnviar.length() >= 20){
+            nomeEnviarVar = faker.name().firstName();
+        }else {
+            nomeEnviarVar = nomeEnviar;
+        }
         paginaCriarConta.preencherNome(nomeEnviarVar);
         paginaCriarConta.preencherEmail(emailEnviar+"@dbccompany.com.br");
         paginaCriarConta.preencherSenha("1234@aA");
@@ -79,7 +82,7 @@ public class EnviarFeedbackSteps extends Browser {
         String nomeReceberVar = "";
         String emailReceberVar = emailReceber;
         if (nomeReceber.length() >= 20){
-            nomeReceberVar = "Bruno Nogueira";
+            nomeReceberVar = faker.name().firstName();
         }else {
             nomeReceberVar = nomeReceber;
         }
@@ -94,7 +97,12 @@ public class EnviarFeedbackSteps extends Browser {
 
         //Criar usuário que vai enviar feedback
         paginaInicial.clicarBtnCriar();
-        String nomeEnviarVar = nomeEnviar;
+        String nomeEnviarVar = "";
+        if (nomeEnviar.length() >= 20){
+            nomeEnviarVar = faker.name().firstName();
+        }else {
+            nomeEnviarVar = nomeEnviar;
+        }
         paginaCriarConta.preencherNome(nomeEnviarVar);
         paginaCriarConta.preencherEmail(emailEnviar+"@dbccompany.com.br");
         paginaCriarConta.preencherSenha("1234@aA");
@@ -128,8 +136,13 @@ public class EnviarFeedbackSteps extends Browser {
     public void criarFeedbackSemTagComSucesso(){
         //Criar usuário que vai receber feedback
         paginaInicial.clicarBtnCriar();
-        String nomeReceberVar = nomeReceber;
+        String nomeReceberVar = "";
         String emailReceberVar = emailReceber;
+        if (nomeReceber.length() >= 20){
+            nomeReceberVar = faker.name().firstName();
+        }else {
+            nomeReceberVar = nomeReceber;
+        }
         paginaCriarConta.preencherNome(nomeReceberVar);
         paginaCriarConta.preencherEmail(emailReceberVar+"@dbccompany.com.br");
         paginaCriarConta.preencherSenha("1234@aA");
@@ -141,7 +154,12 @@ public class EnviarFeedbackSteps extends Browser {
 
         //Criar usuário que vai enviar feedback
         paginaInicial.clicarBtnCriar();
-        String nomeEnviarVar = nomeEnviar;
+        String nomeEnviarVar = "";
+        if (nomeEnviar.length() >= 20){
+            nomeEnviarVar = faker.name().firstName();
+        }else {
+            nomeEnviarVar = nomeEnviar;
+        }
         paginaCriarConta.preencherNome(nomeEnviarVar);
         paginaCriarConta.preencherEmail(emailEnviar+"@dbccompany.com.br");
         paginaCriarConta.preencherSenha("1234@aA");
@@ -172,7 +190,12 @@ public class EnviarFeedbackSteps extends Browser {
     public void criarFeedbackSemDestinatario(){
         //Criar usuário que vai enviar feedback
         paginaInicial.clicarBtnCriar();
-        String nomeEnviarVar = nomeEnviar;
+        String nomeEnviarVar = "";
+        if (nomeEnviar.length() >= 20){
+            nomeEnviarVar = faker.name().firstName();
+        }else {
+            nomeEnviarVar = nomeEnviar;
+        }
         paginaCriarConta.preencherNome(nomeEnviarVar);
         paginaCriarConta.preencherEmail(emailEnviar+"@dbccompany.com.br");
         paginaCriarConta.preencherSenha("1234@aA");
@@ -192,7 +215,12 @@ public class EnviarFeedbackSteps extends Browser {
     public void criarFeedbackSemMensagem(){
         //Criar usuário que vai enviar feedback
         paginaInicial.clicarBtnCriar();
-        String nomeEnviarVar = nomeEnviar;
+        String nomeEnviarVar = "";
+        if (nomeEnviar.length() >= 20){
+            nomeEnviarVar = faker.name().firstName();
+        }else {
+            nomeEnviarVar = nomeEnviar;
+        }
         paginaCriarConta.preencherNome(nomeEnviarVar);
         paginaCriarConta.preencherEmail(emailEnviar+"@dbccompany.com.br");
         paginaCriarConta.preencherSenha("1234@aA");
@@ -213,7 +241,12 @@ public class EnviarFeedbackSteps extends Browser {
     public void criarFeedbackUsuarioInexistente(){
         //Criar usuário que vai enviar feedback
         paginaInicial.clicarBtnCriar();
-        String nomeEnviarVar = nomeEnviar;
+        String nomeEnviarVar = "";
+        if (nomeEnviar.length() >= 20){
+            nomeEnviarVar = faker.name().firstName();
+        }else {
+            nomeEnviarVar = nomeEnviar;
+        }
         paginaCriarConta.preencherNome(nomeEnviarVar);
         paginaCriarConta.preencherEmail(emailEnviar+"@dbccompany.com.br");
         paginaCriarConta.preencherSenha("1234@aA");

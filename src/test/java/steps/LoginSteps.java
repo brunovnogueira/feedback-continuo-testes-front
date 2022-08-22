@@ -23,7 +23,7 @@ public class LoginSteps extends Browser {
     public void loginComSucesso(){
         paginaInicial.clicarBtnCriar();
         if (nome.length()>20){
-            paginaCriarConta.preencherNome("Bruno Nogueira");
+            paginaCriarConta.preencherNome(faker.name().firstName()+" Nogueira");
         }else {
             paginaCriarConta.preencherNome(nome);
         }
@@ -45,7 +45,7 @@ public class LoginSteps extends Browser {
     public void loginSemEmail(){
         paginaInicial.clicarBtnCriar();
         if (nome.length()>20){
-            paginaCriarConta.preencherNome("Bruno Nogueira");
+            paginaCriarConta.preencherNome(faker.name().firstName()+" Nogueira");
         }else {
             paginaCriarConta.preencherNome(nome);
         }
@@ -65,7 +65,7 @@ public class LoginSteps extends Browser {
     public void loginSemSenha(){
         paginaInicial.clicarBtnCriar();
         if (nome.length()>20){
-            paginaCriarConta.preencherNome("Bruno Nogueira");
+            paginaCriarConta.preencherNome(faker.name().firstName()+" Nogueira");
         }else {
             paginaCriarConta.preencherNome(nome);
         }
@@ -86,7 +86,7 @@ public class LoginSteps extends Browser {
     public void loginSenhaErrada(){
         paginaInicial.clicarBtnCriar();
         if (nome.length()>20){
-            paginaCriarConta.preencherNome("Bruno Nogueira");
+            paginaCriarConta.preencherNome(faker.name().firstName()+" Nogueira");
         }else {
             paginaCriarConta.preencherNome(nome);
         }
@@ -109,7 +109,7 @@ public class LoginSteps extends Browser {
     public void loginComEmailErrado(){
         paginaInicial.clicarBtnCriar();
         if (nome.length()>20){
-            paginaCriarConta.preencherNome("Bruno Nogueira");
+            paginaCriarConta.preencherNome(faker.name().firstName()+" Nogueira");
         }else {
             paginaCriarConta.preencherNome(nome);
         }
